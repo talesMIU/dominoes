@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import piece
+
+class Piece(admin.ModelAdmin):
+    list_display = ("pieceName","rightNumber","leftNumber")
+admin.site.register(piece,Piece)
